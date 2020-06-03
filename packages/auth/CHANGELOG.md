@@ -1,3 +1,7 @@
+## 0.0.3 (2020-06-03)
+
+
+
 # [4.0.0](http://srv-rep.lime.local:10000/Packages/auth/compare/v4.0.0-beta.3...v4.0.0) (2020-02-14)
 
 
