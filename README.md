@@ -1,2 +1,2 @@
-# lcgroup.core
-Monorepo for lcgroup angular core packages
+# lcgroup.core packages
+Monorepo for lcgroup enterprise level angular packages
