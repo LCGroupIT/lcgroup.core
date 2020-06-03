@@ -1,0 +1,120 @@
+{
+  "name": "@lcgroup.core/auth",
+  "version": "4.0.0",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    },
+    "whitelistedNonPeerDependencies": [
+      "ngx-cookie"
+    ]
+  },
+  "np": {
+    "contents": "dist",
+    "anyBranch": true
+  },
+  "homepage": "https://github.com/LCGroupIT/lcgroup.core/packages/auth#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LCGroupIT/lcgroup.core.git"
+  },
+  "keywords": [
+    "auth",
+    "angular",
+    "jwt"
+  ],
+  "author": {
+    "name": "Sergey Romanchuk"
+  },
+  "maintainers": [
+    {
+      "email": "rezety@gmail.com",
+      "name": "Sergey Romanchuk"
+    }
+  ],
+  "license": "MIT",
+  "description": "Authentication module",
+  "engines": {
+    "node": ">= 10.13.0"
+  },
+  "scripts": {
+    "karma": "npx karma",
+    "rimraf": "npx rimraf",
+    "ngc": "npx ngc",
+    "cpy": "npx cpy",
+    "prebuild": "npm run clean:build",
+    "build": "npx ng-packagr -p package.json",
+    "copy:assets": "npm run cpy -- CHANGELOG.md dist",
+    "conventional-changelog": "conventional-changelog",
+    "changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
+    "clean": "npm run clean:build && npm run clean:tests",
+    "clean:build": "npm run rimraf -- dist build",
+    "clean:tests": "npm run rimraf -- coverage && npm run rimraf -- tests/**/*.+{js,js.map,d.ts,metadata.json}",
+    "lint": "npm run lint-ts && npm run lint-js && npm run lint-css",
+    "lint-css": "stylelint './src/**/*.css'",
+    "lint-ts": "tslint './src/**/*.ts'",
+    "lint-js": "eslint '**/*.js' --ignore-path .gitignore",
+    "test": "npm run clean:tests && karma start karma.conf.js",
+    "test:watch": "npm run clean:tests && karma start karma.conf.debug.js",
+    "version": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r && npm run build && npm run copy:assets",
+    "release": "npx np",
+    "postrelease": "git add package.json package-lock.json CHANGELOG.md && git commit -m \"🎉 version released 🎉\" && git push"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=8.0.0 <10.0.0",
+    "@angular/core": ">=8.0.0 <10.0.0",
+    "@angular/platform-browser": ">=8.0.0 <10.0.0",
+    "@nguniversal/express-engine": ">=8.0.0 <10.0.0",
+    "@auth0/angular-jwt": "^4.1.2",
+    "rxjs": ">=6.5.3 <7.2.5"
+  },
+  "optionalDependencies": {
+    "ngx-cookie": "^4.1.2"
+  },
+  "devDependencies": {
+    "@angular/common": "9.0.1",
+    "@angular/compiler": "9.0.1",
+    "@angular/compiler-cli": "9.0.1",
+    "@angular/core": "9.0.1",
+    "@angular/platform-browser": "9.0.1",
+    "@angular/platform-browser-dynamic": "9.0.1",
+    "@auth0/angular-jwt": "^4.1.2",
+    "@types/chai": "^4.1.5",
+    "@types/jasmine": "^2.8.8",
+    "chai": "^4.1.2",
+    "codelyzer": "^5.2.1",
+    "conventional-changelog-cli": "^2.0.1",
+    "conventional-github-releaser": "^3.1.2",
+    "coveralls": "^3.0.2",
+    "cpy-cli": "^1.0.1",
+    "es6-shim": "^0.35.3",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "jasmine": "^3.2.0",
+    "jasmine-core": "^3.5.0",
+    "jsonwebtoken": "^8.3.0",
+    "karma": "~4.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "^2.0.1",
+    "karma-jasmine": "~2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "^0.0.32",
+    "karma-webpack": "3.0.5",
+    "ng-packagr": "9.0.0",
+    "np": "6.0.0",
+    "npm-bump": "0.0.25",
+    "ngx-cookie": "^4.1.2",
+    "rimraf": "^3.0.2",
+    "rxjs": "^6.5.4",
+    "sinon": "^6.3.4",
+    "ts-helpers": "^1.1.2",
+    "ts-loader": "^5.1.1",
+    "tslib": "^1.10.0",
+    "tslint": "^5.11.0",
+    "typedoc": "^0.12.0",
+    "typescript": "3.7.5",
+    "webpack": "4.19.1",
+    "zone.js": "~0.10.2",
+    "tsickle": "^0.38.0",
+    "@nguniversal/express-engine": "^9.0.0"
+  }
+}
