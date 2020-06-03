@@ -13,6 +13,9 @@
     "contents": "dist",
     "anyBranch": true
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/LCGroupIT/lcgroup.core/packages/auth#readme",
   "repository": {
     "type": "git",
