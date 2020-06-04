@@ -1,6 +1,6 @@
 {
     "name": "@lcgroup.core/api",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "ngPackage": {
         "lib": {
             "entryFile": "src/index.ts"
@@ -100,7 +100,7 @@
         "tsickle": "^0.35.0",
         "tslint": "^5.17.0",
         "typedoc": "^0.14.2",
-        "typescript": "3.4.5",
+        "typescript": "3.7.5",
         "webpack": "4.26.1",
         "zone.js": "~0.10.2"
     }
