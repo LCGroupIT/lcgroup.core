@@ -16,11 +16,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/LCGroupIT/lcgroup.core/packages/auth#readme",
+  "homepage": "https://github.com/LCGroupIT/lcgroup.core-auth#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LCGroupIT/lcgroup.core.git",
-    "directory": "packages/auth"
+    "url": "git+https://github.com/LCGroupIT/lcgroup.core-auth.git"
   },
   "keywords": [
     "auth",
