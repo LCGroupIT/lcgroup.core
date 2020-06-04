@@ -19,12 +19,15 @@
   "homepage": "https://github.com/LCGroupIT/lcgroup.core/packages/auth#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LCGroupIT/lcgroup.core.git"
+    "url": "git+https://github.com/LCGroupIT/lcgroup.core.git",
+    "directory": "packages/auth"
   },
   "keywords": [
     "auth",
     "angular",
-    "jwt"
+    "jwt",
+    "user",
+    "authorization"
   ],
   "author": {
     "name": "Sergey Romanchuk"
