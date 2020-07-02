@@ -11,11 +11,6 @@ class TestAuthorizeComponent {
     @Input() prop = '';
 }
 
-export class MockElementRef extends ElementRef {
-    constructor() {
-        super(null);
-    }
-}
 
 describe('AuthorizeDirective', () => {
     let component: TestAuthorizeComponent;
@@ -35,9 +30,6 @@ describe('AuthorizeDirective', () => {
             ],
             schemas: [NO_ERRORS_SCHEMA],
             providers: [
-                TemplateRef,
-                ViewContainerRef,
-                {provide: ElementRef, useClass: new MockElementRef()},
                 {
                     provide: AUTH_SERVICE,
                     useValue: authServiceStub

@@ -26,7 +26,7 @@ export interface AuthTokenServiceClassProvider extends ClassProvider {
     exports: [AuthorizeDirective, AuthorizeControlDirective]
 })
 export class AuthModule {
-    static forRoot<T extends User>(options: AuthOptions<T>, service?: typeof AuthService, authTokenServiceProcvider?: AuthTokenServiceClassProvider): ModuleWithProviders {
+    static forRoot<T extends User>(options: AuthOptions<T>, service?: typeof AuthService, authTokenServiceProcvider?: AuthTokenServiceClassProvider): ModuleWithProviders<AuthModule> {
         return {
             ngModule: AuthModule,
             providers: [
