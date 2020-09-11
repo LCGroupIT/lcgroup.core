@@ -19,7 +19,7 @@ Setup example:
             tokenGetter: () => {
                 return authTokenService.getToken();
             },
-            whitelistedDomains: environment.whitelistedDomains
+            allowedDomains: environment.allowedDomains
         };
     }
     // ...
