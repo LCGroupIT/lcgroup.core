@@ -1,13 +1,8 @@
-import {
-  Directive,
-  Inject,
-  Input,
-  HostBinding,
-  ElementRef
-} from '@angular/core';
-import { AuthService } from '../auth.service';
+import { Directive, ElementRef, HostBinding, Inject, Input } from '@angular/core';
+
 import { AUTH_SERVICE } from '../auth.tokens';
 import { User } from '../models';
+import { AuthService } from '../services/auth.service';
 
 @Directive({
   selector: '[authorizeControl]'

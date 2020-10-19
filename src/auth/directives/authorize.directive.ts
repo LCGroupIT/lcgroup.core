@@ -1,14 +1,8 @@
-import {
-  Directive,
-  Inject,
-  Input,
-  TemplateRef,
-  ViewContainerRef
-} from '@angular/core';
+import { Directive, Inject, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
-import { AuthService } from '../auth.service';
 import { AUTH_SERVICE } from '../auth.tokens';
 import { User } from '../models';
+import { AuthService } from '../services/auth.service';
 
 @Directive({
   selector: '[authorize]'

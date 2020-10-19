@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AuthTokenService, defaults } from '../src';
-import * as AuthTokens from '../src/auth.tokens';
+import { AuthTokenService, AUTH_OPTIONS_DEFAULTS } from '../src';
+import * as AuthTokens from '../src/auth/auth.tokens';
 
 describe('AuthTokenService', () => {
     let service: AuthTokenService;
-    const TOKEN_KEY = defaults.storageTokenName;
+    const TOKEN_KEY = AUTH_OPTIONS_DEFAULTS.storageTokenName;
     const TOKEN = 'token';
     beforeEach(() => {
         TestBed.configureTestingModule({

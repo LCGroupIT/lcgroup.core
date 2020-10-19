@@ -2,9 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { defaults } from './auth.constants';
-import * as AuthTokens from './auth.tokens';
-import { OAuthParams, AuthOptions, User } from './models/index';
+import { AUTH_OPTIONS_DEFAULTS } from '../options-defaults.constants';
+import * as AuthTokens from '../auth.tokens';
+import { AuthOptions, OAuthParams, User } from '../models';
 
 
 const headers = new HttpHeaders({
@@ -22,7 +22,7 @@ export class AuthApiService {
         @Inject(AuthTokens.AUTH_OPTIONS) options: AuthOptions<User>
     ) {
         this.stsParams = options.stsParams;
-        this.tokenEndpoint = options.tokenEndpoint || defaults.tokenEndpoint;
+        this.tokenEndpoint = options.tokenEndpoint || AUTH_OPTIONS_DEFAULTS.tokenEndpoint;
     }
 
     login(login: string, password: string): Observable<any> {
