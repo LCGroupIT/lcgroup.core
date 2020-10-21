@@ -37,7 +37,7 @@ Setup example:
             scope: 'your scopes divided with space'
         },
         tokenEndpoint:
-            environment.identityServerUrl + defaults.tokenEndpoint 
+            environment.identityServerUrl + AUTH_OPTIONS_DEFAULTS.tokenEndpoint 
     })
 ```
 

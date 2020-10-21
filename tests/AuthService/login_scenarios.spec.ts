@@ -2,7 +2,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { getTestBed, TestBed } from '@angular/core/testing';
 import { JWT_OPTIONS, JwtModule } from '@auth0/angular-jwt';
 
-import { AUTH_SERVICE, AuthModule, AuthService, AuthTokenService, defaults, User } from '../../src';
+import { AUTH_SERVICE, AuthModule, AuthService, AuthTokenService, AUTH_OPTIONS_DEFAULTS, User } from '../../src';
 import { generateToken } from '../utils/jwt';
 
 export function jwtOptionsFactory(authTokenService: AuthTokenService) {
@@ -52,7 +52,7 @@ describe('Service: AuthService login scenarios:', () => {
             expect(service.isAuthenticated()).toBeTruthy();
         });
 
-        httpMock.expectOne(defaults.tokenEndpoint)
+        httpMock.expectOne(AUTH_OPTIONS_DEFAULTS.tokenEndpoint)
             .flush({
                 'custom_token_name': token.access_token
             });
@@ -67,7 +67,7 @@ describe('Service: AuthService login scenarios:', () => {
             expect(JSON.parse(tokenService.getToken())).toBeFalsy();
             expect(service.isAuthenticated()).toBeFalsy();
         });
-        httpMock.expectOne(defaults.tokenEndpoint)
+        httpMock.expectOne(AUTH_OPTIONS_DEFAULTS.tokenEndpoint)
             .flush({});
     });
 

@@ -1,8 +1,9 @@
-import { AuthApiService } from '../src/auth-api.service';
-import { AuthOptions, User } from '../src/models';
-import { TestBed, getTestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import * as AuthTokens from '../src/auth.tokens';
+import { getTestBed, TestBed } from '@angular/core/testing';
+
+import * as AuthTokens from '../src/auth/auth.tokens';
+import { AuthOptions, User } from '../src/auth/models';
+import { AuthApiService } from '../src/auth/services/auth-api.service';
 
 describe('AuthApiService', () => {
     let injector: TestBed;

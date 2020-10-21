@@ -1,12 +1,11 @@
-import { Inject, Injectable, Optional, PLATFORM_ID } from '@angular/core';
-
-import { defaults } from './auth.constants';
-import * as AuthTokens from './auth.tokens';
-import { AuthOptions, User } from './models';
-import { CookieService } from 'ngx-cookie';
-import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { isPlatformBrowser } from '@angular/common';
-import { IAuthTokenServiceInterface } from './auth-token-service.interface';
+import { Inject, Injectable, Optional, PLATFORM_ID } from '@angular/core';
+import { REQUEST } from '@nguniversal/express-engine/tokens';
+import { CookieService } from 'ngx-cookie';
+
+import { AUTH_OPTIONS_DEFAULTS } from '../../auth/options-defaults.constants';
+import * as AuthTokens from '../auth.tokens';
+import { AuthOptions, IAuthTokenServiceInterface, User } from '../models';
 
 const expires = new Date('31 Dec 9999 23:59:59 GMT');
 
@@ -21,7 +20,7 @@ export class CookieAuthTokenService implements IAuthTokenServiceInterface {
                 @Optional() @Inject(REQUEST) private req: Request,
                 private cookie: CookieService) {
         const opts = options || {userType: User};
-        this.storageTokenName = opts.storageTokenName || defaults.storageTokenName;
+        this.storageTokenName = opts.storageTokenName || AUTH_OPTIONS_DEFAULTS.storageTokenName;
         this.isBrowser = isPlatformBrowser(platformId);
     }
 

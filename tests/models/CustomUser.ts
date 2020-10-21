@@ -1,4 +1,4 @@
-import { User } from '../../src/models/index';
+import { User } from '../../src/auth/models';
 
 export class CustomUser extends User {
   // tslint:disable-next-line:variable-name

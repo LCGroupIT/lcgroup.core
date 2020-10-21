@@ -1,9 +1,8 @@
 import { Inject, Injectable } from '@angular/core';
 
-import { defaults } from './auth.constants';
-import * as AuthTokens from './auth.tokens';
-import { AuthOptions, User } from './models';
-import { IAuthTokenServiceInterface } from './auth-token-service.interface';
+import { AUTH_OPTIONS_DEFAULTS } from '../options-defaults.constants';
+import * as AuthTokens from '../auth.tokens';
+import { AuthOptions, IAuthTokenServiceInterface, User } from '../models';
 
 @Injectable()
 export class AuthTokenService implements IAuthTokenServiceInterface {
@@ -11,7 +10,7 @@ export class AuthTokenService implements IAuthTokenServiceInterface {
 
     constructor(@Inject(AuthTokens.AUTH_OPTIONS) options: AuthOptions<User>) {
         const opts = options || {userType: User};
-        this.storageTokenName = opts.storageTokenName || defaults.storageTokenName;
+        this.storageTokenName = opts.storageTokenName || AUTH_OPTIONS_DEFAULTS.storageTokenName;
     }
 
     saveToken(token: string): void {

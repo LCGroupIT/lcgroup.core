@@ -11,9 +11,8 @@ import {
     AuthService,
     AuthTokenService,
 } from '../../src';
-import { User } from '../../src/models/user';
+import { User } from '../../src/auth/models';
 import { generateToken } from '../utils/jwt';
-import { CustomUser } from '../models/CustomUser';
 
 class CustomAuthService<T extends User> extends AuthService<T> {
 
