@@ -1,3 +1,7 @@
+# [3.0.0](https://github.com/LCGroupIT/lcgroup.core-auth/compare/v2.0.0...v3.0.0) (2020-10-25)
+
+
+
 # [2.0.0](https://github.com/LCGroupIT/lcgroup.core-auth/compare/v1.0.0...v2.0.0) (2020-09-11)
 
 
