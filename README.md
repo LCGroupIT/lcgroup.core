@@ -63,6 +63,15 @@ export class CustomUser extends User {
 }
 ```
 
+To access the claim display mode, you need to pass the enableDevHotkey parameter:
+```typescript
+    AuthModule.forRoot({
+        ...,
+        { enableDevHotkey: true }
+    })
+```
+To enable the mode, press the key combination Ctrl+F7.
+
 ## Usage
 
 ### AuthService
