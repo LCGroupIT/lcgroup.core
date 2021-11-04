@@ -1,3 +1,6 @@
+Moved to: **https://github.com/protoarch/angular**
+
+
 # @lcgroup.core/auth
 
 AuthModule allows to add authentication/authorization mechanism (based on security token service) to your project.
